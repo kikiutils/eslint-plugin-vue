@@ -143,14 +143,15 @@ Note that `v-bind="object"` syntax is considered to be the same as the next or p
       "EVENTS",
       "CONTENT"
     ],
-    "alphabetical": false
+    "alphabetical": false,
+    "enhancedAlphabeticalSorting": true
   }]
 }
 ```
 
-### `"alphabetical": true`
+### `"alphabetical": true` and `"enhancedAlphabeticalSorting": false`
 
-<eslint-code-block fix :rules="{'vue/attributes-order': ['error', {alphabetical: true}]}">
+<eslint-code-block fix :rules="{'vue/attributes-order': ['error', {alphabetical: true, enhancedAlphabeticalSorting: false}]}">
 
 ```vue
 <template>
@@ -196,6 +197,48 @@ Note that `v-bind="object"` syntax is considered to be the same as the next or p
       class="bar">
     </div>
 
+</template>
+```
+
+</eslint-code-block>
+
+### `"alphabetical": true` and `"enhancedAlphabeticalSorting": true` (default)
+
+<eslint-code-block fix :rules="{'vue/attributes-order': ['error', {alphabetical: true}]}">
+
+```vue
+<template>
+  <!-- ✓ GOOD -->
+    <div
+      class="foo"
+      :class="bar"
+      a-custom-prop="value"
+      z-prop="Z"
+      :another-custom-prop="value"
+      :blue-color="false"
+      boolean-prop
+      @[c]="functionCall"
+      @change="functionCall"
+      @click="functionCall"
+      @input="functionCall"
+      v-text="textContent">
+    </div>
+
+  <!-- ✗ BAD -->
+    <div
+      a-custom-prop="value"
+      :another-custom-prop="value"
+      :blue-color="false"
+      boolean-prop
+      class="foo"
+      :class="bar"
+      z-prop="Z"
+      v-on:[c]="functionCall"
+      @change="functionCall"
+      v-on:click="functionCall"
+      @input="functionCall"
+      v-text="textContent">
+    </div>
 </template>
 ```
 
@@ -263,5 +306,7 @@ This rule was introduced in eslint-plugin-vue v4.3.0
 
 ## :mag: Implementation
 
-- [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/attributes-order.js)
-- [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/attributes-order.js)
+- [Rule source](https://github.com/kikiutils/eslint-plugin-vue/blob/misc/updates/lib/rules/attributes-order.js)
+<!-- - [Rule source](https://github.com/vuejs/eslint-plugin-vue/blob/master/lib/rules/attributes-order.js) -->
+- [Test source](https://github.com/kikiutils/eslint-plugin-vue/blob/misc/updates/tests/lib/rules/attributes-order.js)
+<!-- - [Test source](https://github.com/vuejs/eslint-plugin-vue/blob/master/tests/lib/rules/attributes-order.js) -->
