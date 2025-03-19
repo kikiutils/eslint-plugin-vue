@@ -3,7 +3,7 @@
 const assert = require('assert')
 const plugin = require('../..')
 const expectedMeta = {
-  name: 'eslint-plugin-vue',
+  name: '@kikiutils/eslint-plugin-vue',
   version: require('../../package.json').version
 }
 

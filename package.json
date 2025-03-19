@@ -1,5 +1,5 @@
 {
-  "name": "eslint-plugin-vue",
+  "name": "@kikiutils/eslint-plugin-vue",
   "version": "10.0.0",
   "description": "Official ESLint plugin for Vue.js",
   "main": "lib/index.js",
@@ -28,7 +28,7 @@
   "files": [
     "lib"
   ],
-  "homepage": "https://eslint.vuejs.org",
+  "homepage": "https://github.com/kikiutils/eslint-plugin-vue",
   "keywords": [
     "eslint",
     "eslint-plugin",
@@ -40,15 +40,16 @@
   "author": "Toru Nagashima (https://github.com/mysticatea)",
   "contributors": [
     "Michał Sajnóg <msajnog93@gmail.com> (https://github.com/michalsnik)",
-    "Yosuke Ota (https://github.com/ota-meshi)"
+    "Yosuke Ota (https://github.com/ota-meshi)",
+    "kiki-kanri (https://github.com/kiki-kanri)"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vuejs/eslint-plugin-vue.git"
+    "url": "git+https://github.com/kikiutils/eslint-plugin-vue.git"
   },
   "bugs": {
-    "url": "https://github.com/vuejs/eslint-plugin-vue/issues"
+    "url": "https://github.com/kikiutils/eslint-plugin-vue/issues"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
@@ -100,5 +101,10 @@
     "typescript": "^5.7.2",
     "vitepress": "^1.4.1",
     "vue-eslint-parser": "^10.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }
