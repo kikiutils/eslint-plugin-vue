@@ -326,7 +326,7 @@ tester.run('attributes-order', rule, {
             v-text="textContent">
           </div>
         </template>`,
-      options: [{ alphabetical: true }]
+      options: [{ alphabetical: true, enhancedAlphabeticalSorting: false }]
     },
     {
       filename: 'test.vue',
@@ -1039,7 +1039,7 @@ tester.run('attributes-order', rule, {
             z-prop="value">
           </div>
         </template>`,
-      options: [{ alphabetical: true }],
+      options: [{ alphabetical: true, enhancedAlphabeticalSorting: false }],
       errors: [
         {
           message: 'Attribute "boolean-prop" should go before "z-prop".',
