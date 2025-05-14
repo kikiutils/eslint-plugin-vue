@@ -1,6 +1,6 @@
 {
   "name": "@kikiutils/eslint-plugin-vue",
-  "version": "10.2.1",
+  "version": "10.2.2",
   "description": "Official ESLint plugin for Vue.js",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
