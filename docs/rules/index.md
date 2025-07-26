@@ -245,7 +245,7 @@ For example:
 | [vue/no-restricted-component-names] | disallow specific component names | :bulb: | :hammer: |
 | [vue/no-restricted-component-options] | disallow specific component option |  | :hammer: |
 | [vue/no-restricted-custom-event] | disallow specific custom event | :bulb: | :hammer: |
-| [vue/no-restricted-html-elements] | disallow specific HTML elements |  | :hammer: |
+| [vue/no-restricted-html-elements] | disallow specific elements |  | :hammer: |
 | [vue/no-restricted-props] | disallow specific props | :bulb: | :hammer: |
 | [vue/no-restricted-static-attribute] | disallow specific attribute |  | :hammer: |
 | [vue/no-restricted-v-bind] | disallow specific argument in `v-bind` |  | :hammer: |
@@ -314,7 +314,7 @@ The following rules extend the rules provided by ESLint itself and apply them to
 | [vue/comma-style] | Enforce consistent comma style in `<template>` | :wrench: | :lipstick: |
 | [vue/dot-location] | Enforce consistent newlines before and after dots in `<template>` | :wrench: | :lipstick: |
 | [vue/dot-notation] | Enforce dot notation whenever possible in `<template>` | :wrench: | :hammer: |
-| [vue/eqeqeq] | Require the use of `===` and `!==` in `<template>` | :wrench: | :hammer: |
+| [vue/eqeqeq] | Require the use of `===` and `!==` in `<template>` | :wrench::bulb: | :hammer: |
 | [vue/func-call-spacing] | Require or disallow spacing between function identifiers and their invocations in `<template>` | :wrench: | :lipstick: |
 | [vue/key-spacing] | Enforce consistent spacing between property names and type annotations in types and interfaces in `<template>` | :wrench: | :lipstick: |
 | [vue/keyword-spacing] | Enforce consistent spacing before and after keywords in `<template>` | :wrench: | :lipstick: |
@@ -324,9 +324,10 @@ The following rules extend the rules provided by ESLint itself and apply them to
 | [vue/no-constant-condition] | Disallow constant expressions in conditions in `<template>` |  | :warning: |
 | [vue/no-empty-pattern] | Disallow empty destructuring patterns in `<template>` |  | :warning: |
 | [vue/no-extra-parens] | Disallow unnecessary parentheses in `<template>` | :wrench: | :lipstick: |
-| [vue/no-implicit-coercion] | Disallow shorthand type conversions in `<template>` | :wrench: | :hammer: |
+| [vue/no-implicit-coercion] | Disallow shorthand type conversions in `<template>` | :wrench::bulb: | :hammer: |
 | [vue/no-irregular-whitespace] | disallow irregular whitespace in `.vue` files |  | :warning: |
 | [vue/no-loss-of-precision] | Disallow literal numbers that lose precision in `<template>` |  | :warning: |
+| [vue/no-negated-condition] | Disallow negated conditions in `<template>` |  | :hammer: |
 | [vue/no-restricted-syntax] | Disallow specified syntax in `<template>` |  | :hammer: |
 | [vue/no-sparse-arrays] | Disallow sparse arrays in `<template>` |  | :warning: |
 | [vue/no-useless-concat] | Disallow unnecessary concatenation of literals or template literals in `<template>` |  | :hammer: |
@@ -482,6 +483,7 @@ The following rules extend the rules provided by ESLint itself and apply them to
 [vue/no-multiple-slot-args]: ./no-multiple-slot-args.md
 [vue/no-multiple-template-root]: ./no-multiple-template-root.md
 [vue/no-mutating-props]: ./no-mutating-props.md
+[vue/no-negated-condition]: ./no-negated-condition.md
 [vue/no-parsing-error]: ./no-parsing-error.md
 [vue/no-potential-component-option-typo]: ./no-potential-component-option-typo.md
 [vue/no-ref-as-operand]: ./no-ref-as-operand.md
