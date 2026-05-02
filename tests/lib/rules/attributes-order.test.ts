@@ -706,6 +706,18 @@ tester.run('attributes-order', rule, {
           @input="handleInput"/>
       </template>`,
       options: [{ ignoreVBindObject: true }]
+    },
+    {
+      filename: 'test.vue',
+      code: `
+      <template>
+        <div
+          class="foo"
+          :other="bar"
+          bool-prop>
+        </div>
+      </template>`,
+      options: [{ alphabetical: true, alphabeticalEnhanced: true }]
     }
   ],
 
@@ -2469,6 +2481,89 @@ tester.run('attributes-order', rule, {
           line: 7,
           column: 11,
           endLine: 7,
+          endColumn: 22
+        }
+      ]
+    },
+    {
+      filename: 'test.vue',
+      code: `
+      <template>
+        <div
+          bool-prop
+          class="foo">
+        </div>
+      </template>`,
+      output: `
+      <template>
+        <div
+          class="foo"
+          bool-prop>
+        </div>
+      </template>`,
+      options: [{ alphabetical: true, alphabeticalEnhanced: true }],
+      errors: [
+        {
+          message: 'Attribute "class" should go before "bool-prop".',
+          line: 5,
+          column: 11,
+          endLine: 5,
+          endColumn: 22
+        }
+      ]
+    },
+    {
+      filename: 'test.vue',
+      code: `
+      <template>
+        <div
+          :other="bar"
+          @click="handleClick"
+          class="foo">
+        </div>
+      </template>`,
+      output: `
+      <template>
+        <div
+          :other="bar"
+          class="foo"
+          @click="handleClick">
+        </div>
+      </template>`,
+      options: [{ alphabetical: true, alphabeticalEnhanced: true }],
+      errors: [
+        {
+          message: 'Attribute "class" should go before "@click".',
+          line: 6,
+          column: 11,
+          endLine: 6,
+          endColumn: 22
+        }
+      ]
+    },
+    {
+      filename: 'test.vue',
+      code: `
+      <template>
+        <div
+          v-foo="bar"
+          v-bar="foo">
+        </div>
+      </template>`,
+      output: `
+      <template>
+        <div
+          v-bar="foo"
+          v-foo="bar">
+        </div>
+      </template>`,
+      options: [{ alphabetical: true, alphabeticalEnhanced: true }],
+      errors: [
+        {
+          message: 'Attribute "v-bar" should go before "v-foo".',
+          line: 5,
+          column: 11,
+          endLine: 5,
           endColumn: 22
         }
       ]

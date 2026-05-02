@@ -148,6 +148,7 @@ Note that `v-bind="object"` syntax is considered to be the same as the next or p
       "CONTENT"
     ],
     "alphabetical": false,
+    "alphabeticalEnhanced": false,
     "sortLineLength": false,
     "ignoreVBindObject": false
   }]
@@ -202,6 +203,32 @@ Note that `v-bind="object"` syntax is considered to be the same as the next or p
       class="bar">
     </div>
 
+</template>
+```
+
+</eslint-code-block>
+
+### `"alphabeticalEnhanced": true`
+
+When set to `true` along with `alphabetical: true`, enables enhanced alphabetical sorting within groups. This mode prioritizes attributes with values over shorthand boolean attributes, places `class` attributes first, and sorts directives alphabetically.
+
+<eslint-code-block fix :rules="{'vue/attributes-order': ['error', {alphabetical: true, alphabeticalEnhanced: true}]}">
+
+```vue
+<template>
+  <!-- ✓ GOOD -->
+  <div
+    class="foo"
+    :other="bar"
+    bool-prop>
+  </div>
+
+  <!-- ✗ BAD -->
+  <div
+    bool-prop
+    class="foo"
+    :other="bar">
+  </div>
 </template>
 ```
 
