@@ -211,6 +211,7 @@ For example:
 |:--------|:------------|:--:|:--:|
 | [vue/block-lang] | disallow use other than available `lang` |  | :hammer: |
 | [vue/block-tag-newline] | enforce line breaks after opening and before closing block-level tags | :wrench: | :lipstick: |
+| [vue/class-hex-color-case] | enforce lowercase hex colors in class names | :wrench: | :hammer: |
 | [vue/component-api-style] | enforce component API style |  | :hammer: |
 | [vue/component-name-in-template-casing] | enforce specific casing for the component naming style in template | :wrench: | :hammer: |
 | [vue/component-options-name-casing] | enforce the casing of component name in `components` options | :wrench::bulb: | :hammer: |
@@ -394,6 +395,7 @@ The following rules extend the rules provided by ESLint itself and apply them to
 [vue/block-tag-newline]: ./block-tag-newline.md
 [vue/brace-style]: ./brace-style.md
 [vue/camelcase]: ./camelcase.md
+[vue/class-hex-color-case]: ./class-hex-color-case.md
 [vue/comma-dangle]: ./comma-dangle.md
 [vue/comma-spacing]: ./comma-spacing.md
 [vue/comma-style]: ./comma-style.md

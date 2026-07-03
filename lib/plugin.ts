@@ -17,6 +17,7 @@ import blockSpacing from './rules/block-spacing.js'
 import blockTagNewline from './rules/block-tag-newline.js'
 import braceStyle from './rules/brace-style.js'
 import camelcase from './rules/camelcase.js'
+import classHexColorCase from './rules/class-hex-color-case.ts'
 import commaDangle from './rules/comma-dangle.js'
 import commaSpacing from './rules/comma-spacing.js'
 import commaStyle from './rules/comma-style.js'
@@ -273,6 +274,7 @@ export default {
     'block-tag-newline': blockTagNewline,
     'brace-style': braceStyle,
     camelcase,
+    'class-hex-color-case': classHexColorCase,
     'comma-dangle': commaDangle,
     'comma-spacing': commaSpacing,
     'comma-style': commaStyle,
